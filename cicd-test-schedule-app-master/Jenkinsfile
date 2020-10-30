@@ -1,14 +1,14 @@
 pipeline { 
     environment { 
-        registry = "YourDockerhubAccount/YourRepository"
+        registry = "davidssg/jenkins"
         registryCredential = 'dockerhub_id' 
-        dockerImage = '' 
+        dockerImage = './cicd-test-schedule-app-master/Dockerfile' 
     }
     agent any 
     stages { 
         stage('Cloning our Git') { 
             steps { 
-                git 'https://github.com/YourGithubAccount/YourGithubRepository.git' 
+                git 'https://github.com/Davidsasegu/practica.git' 
             }
         } 
         stage('Building our image') { 
