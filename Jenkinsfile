@@ -2,7 +2,7 @@ pipeline {
     environment { 
         registry = "davidssg/jenkins"
         registryCredential = 'dockerhub_id' 
-        dockerImage = './cicd-test-schedule-app-master/Dockerfile' 
+        dockerImage = '' 
     }
     agent any 
     stages { 
